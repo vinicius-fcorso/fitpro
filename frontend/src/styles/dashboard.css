@@ -1,0 +1,244 @@
+.dashboard-header {
+  margin-bottom: 28px;
+}
+
+.dashboard-eyebrow {
+  color: #d9ff00;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+}
+
+.dashboard-header h2 {
+  margin: 8px 0 6px;
+
+  font-size: 30px;
+  line-height: 1.2;
+}
+
+.dashboard-header p {
+  margin: 0;
+
+  color: #8d94a3;
+  font-size: 14px;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+
+  margin-bottom: 24px;
+}
+
+.stat-card {
+  padding: 20px;
+
+  background: #15181e;
+  border: 1px solid #242832;
+  border-radius: 12px;
+}
+
+.stat-card.highlight {
+  border-color: #39420f;
+}
+
+.stat-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-bottom: 18px;
+}
+
+.stat-icon {
+  width: 34px;
+  height: 34px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 8px;
+
+  background: #1e232b;
+
+  font-size: 15px;
+}
+
+.stat-label {
+  color: #737b8a;
+
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.stat-card > strong {
+  display: block;
+
+  margin-bottom: 4px;
+
+  font-size: 28px;
+  line-height: 1;
+}
+
+.stat-description {
+  color: #737b8a;
+  font-size: 12px;
+}
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 24px;
+}
+
+.dashboard-panel {
+  background: #15181e;
+  border: 1px solid #242832;
+  border-radius: 12px;
+
+  overflow: hidden;
+}
+
+.panel-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 20px;
+
+  border-bottom: 1px solid #242832;
+}
+
+.panel-header h3 {
+  margin: 0 0 4px;
+
+  font-size: 15px;
+}
+
+.panel-header span {
+  color: #737b8a;
+  font-size: 12px;
+}
+
+.panel-header a {
+  color: #d9ff00;
+
+  font-size: 12px;
+  font-weight: 700;
+
+  text-decoration: none;
+}
+
+.student-list,
+.workout-list {
+  padding: 8px 20px;
+}
+
+.student-item,
+.workout-item {
+  display: flex;
+  align-items: center;
+
+  padding: 14px 0;
+
+  border-bottom: 1px solid #20242c;
+}
+
+.student-item:last-child,
+.workout-item:last-child {
+  border-bottom: none;
+}
+
+.student-avatar {
+  width: 38px;
+  height: 38px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-right: 12px;
+
+  border-radius: 50%;
+
+  background: #242a33;
+
+  color: #ffffff;
+
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.student-info {
+  display: flex;
+  flex-direction: column;
+
+  gap: 3px;
+
+  flex: 1;
+}
+
+.student-info strong,
+.workout-item strong {
+  font-size: 13px;
+}
+
+.student-info span,
+.workout-item span {
+  color: #737b8a;
+  font-size: 11px;
+}
+
+.student-status {
+  padding: 5px 8px;
+
+  border-radius: 5px;
+
+  background: #202a08;
+  color: #d9ff00;
+
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.workout-icon {
+  width: 38px;
+  height: 38px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-right: 12px;
+
+  border-radius: 8px;
+
+  background: #20242c;
+}
+
+.workout-item > div:last-child {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.empty-state {
+  padding: 24px 0;
+
+  color: #737b8a;
+
+  font-size: 13px;
+  text-align: center;
+}
+
+.dashboard-loading,
+.dashboard-error {
+  padding: 40px;
+
+  color: #8d94a3;
+
+  text-align: center;
+}

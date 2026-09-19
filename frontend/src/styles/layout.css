@@ -1,0 +1,71 @@
+.app-layout {
+  min-height: 100vh;
+  display: flex;
+  background: #0f1115;
+  color: #ffffff;
+}
+
+.app-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.topbar {
+  height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 32px;
+
+  background: #15181e;
+  border-bottom: 1px solid #242832;
+}
+
+.topbar h1 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.topbar-user {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.user-avatar {
+  width: 40px;
+  height: 40px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #d9ff00;
+  color: #111111;
+
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.user-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.user-info strong {
+  font-size: 14px;
+}
+
+.user-info span {
+  color: #8d94a3;
+  font-size: 12px;
+}
+
+.page-content {
+  padding: 32px;
+}

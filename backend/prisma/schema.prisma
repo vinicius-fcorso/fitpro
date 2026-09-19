@@ -1,0 +1,98 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+}
+
+enum UserRole {
+  PERSONAL
+  ALUNO
+}
+
+model User {
+  id        Int      @id @default(autoincrement())
+  name      String
+  email     String   @unique
+  password  String
+  role      UserRole
+
+  trainer   Trainer?
+  student   Student?
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Trainer {
+  id          Int      @id @default(autoincrement())
+  userId      Int      @unique
+
+  bio         String?
+  specialty   String?
+  city        String?
+  phone       String?
+  instagram   String?
+  price       Float?
+
+  user        User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  students    Student[]
+  workouts    Workout[]
+
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model Student {
+  id          Int      @id @default(autoincrement())
+  userId      Int      @unique
+  trainerId   Int
+
+  birthDate   DateTime?
+  height      Float?
+  weight      Float?
+  goal        String?
+
+  user        User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  trainer     Trainer   @relation(fields: [trainerId], references: [id], onDelete: Cascade)
+  workouts    Workout[]
+
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model Workout {
+  id          Int      @id @default(autoincrement())
+  name        String
+  description String?
+
+  trainerId   Int
+  studentId   Int
+
+  trainer     Trainer  @relation(fields: [trainerId], references: [id], onDelete: Cascade)
+  student     Student  @relation(fields: [studentId], references: [id], onDelete: Cascade)
+
+  exercises   WorkoutExercise[]
+
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model WorkoutExercise {
+  id           Int      @id @default(autoincrement())
+  workoutId    Int
+
+  exerciseName String
+  sets         Int
+  reps         Int
+  weight       Float?
+  restSeconds  Int?
+  order        Int
+  notes        String?
+
+  workout      Workout  @relation(fields: [workoutId], references: [id], onDelete: Cascade)
+
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+}

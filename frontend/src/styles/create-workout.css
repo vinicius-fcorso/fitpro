@@ -1,0 +1,248 @@
+.create-workout-page {
+  max-width: 1180px;
+  margin: 0 auto;
+}
+
+.create-workout-back {
+  margin-bottom: 20px;
+  border: 0;
+  background: transparent;
+  color: #858d9c;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.create-workout-back:hover {
+  color: #d9ff00;
+}
+
+.create-workout-header {
+  margin-bottom: 18px;
+}
+
+.create-workout-header span,
+.create-workout-section-header span {
+  color: #d9ff00;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 1.3px;
+}
+
+.create-workout-header h2 {
+  margin: 6px 0;
+  color: #ffffff;
+  font-size: 24px;
+}
+
+.create-workout-header p {
+  margin: 0;
+  color: #737b8a;
+  font-size: 12px;
+}
+
+.create-workout-section {
+  padding: 24px;
+  margin-bottom: 18px;
+  background: #15181e;
+  border: 1px solid #282e38;
+  border-radius: 12px;
+}
+
+.create-workout-section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.create-workout-section-header h3 {
+  margin: 5px 0 0;
+  color: #ffffff;
+  font-size: 17px;
+}
+
+.create-workout-form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.create-workout-field {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.create-workout-field label {
+  color: #858d9c;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.create-workout-field input {
+  width: 100%;
+  min-height: 42px;
+  box-sizing: border-box;
+  padding: 0 12px;
+  border: 1px solid #2b313b;
+  border-radius: 7px;
+  outline: none;
+  background: #101318;
+  color: #ffffff;
+  font-size: 12px;
+}
+
+.create-workout-field input:focus {
+  border-color: #d9ff00;
+}
+
+.create-workout-field input::placeholder {
+  color: #505764;
+}
+
+.create-workout-add-button {
+  min-height: 36px;
+  padding: 0 13px;
+  border: 1px solid #d9ff00;
+  border-radius: 7px;
+  background: transparent;
+  color: #d9ff00;
+  font-size: 10px;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.create-workout-add-button:hover {
+  background: #d9ff00;
+  color: #111111;
+}
+
+.create-workout-exercises {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.create-workout-exercise {
+  padding: 18px;
+  background: #101318;
+  border: 1px solid #252b34;
+  border-radius: 9px;
+}
+
+.create-workout-exercise-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.create-workout-exercise-header strong {
+  color: #dfe3e9;
+  font-size: 12px;
+}
+
+.create-workout-exercise-header button {
+  border: 0;
+  background: transparent;
+  color: #ff7272;
+  font-size: 10px;
+  cursor: pointer;
+}
+
+.create-workout-exercise-grid {
+  display: grid;
+  grid-template-columns: 2fr 0.7fr 0.8fr 0.9fr 1fr;
+  gap: 12px;
+}
+
+.create-workout-exercise-grid .exercise-name {
+  grid-column: span 2;
+}
+
+.create-workout-exercise-grid .exercise-notes {
+  grid-column: span 2;
+}
+
+.create-workout-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+.create-workout-cancel,
+.create-workout-save {
+  min-height: 40px;
+  padding: 0 18px;
+  border-radius: 7px;
+  font-size: 11px;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.create-workout-cancel {
+  border: 1px solid #303640;
+  background: #15181e;
+  color: #858d9c;
+}
+
+.create-workout-save {
+  border: 0;
+  background: #d9ff00;
+  color: #111111;
+}
+
+.create-workout-save:hover {
+  background: #e2ff33;
+}
+
+@media (max-width: 900px) {
+  .create-workout-exercise-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .create-workout-exercise-grid .exercise-name,
+  .create-workout-exercise-grid .exercise-notes {
+    grid-column: span 2;
+  }
+}
+
+@media (max-width: 650px) {
+  .create-workout-form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .create-workout-section {
+    padding: 18px;
+  }
+
+  .create-workout-section-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .create-workout-add-button {
+    width: 100%;
+  }
+
+  .create-workout-exercise-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .create-workout-exercise-grid .exercise-name,
+  .create-workout-exercise-grid .exercise-notes {
+    grid-column: span 1;
+  }
+
+  .create-workout-actions {
+    flex-direction: column;
+  }
+
+  .create-workout-cancel,
+  .create-workout-save {
+    width: 100%;
+  }
+}
